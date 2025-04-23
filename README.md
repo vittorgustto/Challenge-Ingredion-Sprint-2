@@ -117,12 +117,36 @@ Os códigos/scrpits utilizados no Google Collab se encontram em */Códigos Colla
 
 O DataFrame com os dados reais e a linha da previsão de 2025 foi exportado para:
 
-previsao_2025_final.csv
+(document/dados_com_previsao_2025.csv)
+
+Você pode abrir o arquivo em Excel, LibreOffice, ou outro sistema para visualizar e usar os dados.
+
+### 🛠️ Tecnologias e Bibliotecas ###
+
+* Python 3.x
+* pandas
+* numpy
+* scikit-learn
+* matplotlib
 
 
-### Vídeo Demonstrativo ###
+### 🚀 Como Executar ###
 
-[Link do vídeo](https://youtu.be/F-sXUfZe3tw)
+1. Instale as bibliotecas com pip install pandas scikit-learn matplotlib.
+
+2. Coloque o arquivo dados_produtividade.csv na mesma pasta do script Python.
+
+3. Execute o script para treinar o modelo e gerar o gráfico.
+
+4. O arquivo previsao_2025_final.csv será gerado automaticamente.
+
+
+### 📌 Observações ###
+
+* O valor para 2025 é uma estimativa com base nas médias históricas.
+
+* A precisão depende da qualidade e quantidade dos dados disponíveis.
+
 
 ## 📁 Estrutura de pastas
 
