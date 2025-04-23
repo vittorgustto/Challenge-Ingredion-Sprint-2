@@ -28,20 +28,28 @@
 ### Projeto Challenge Ingredion - Fase 2: 🌱 Previsão de Produção Agrícola com Regressão Linear ###
 Este projeto tem como objetivo prever a produção agrícola em toneladas (ton) no Brasil utilizando dados públicos reais (da CONAB, MAPA e IBGE), com variáveis derivadas calculadas a partir dos dados brutos. Utilizamos Regressão Linear para fazer a previsão do valor para o ano de 2025.
 
+
 ### 📊 Dados Utilizados ###
 Os dados foram coletados de fontes públicas confiáveis como:
 
 -CONAB - Companhia Nacional de Abastecimento
+
 -MAPA - Ministério da Agricultura, Pecuária e Abastecimento
+
 -IBGE - Instituto Brasileiro de Geografia e Estatística
 
 O arquivo base (dados_produtividade.csv) contém as colunas:
 
 -Ano
+
 -Produção (ton)
+
 -Área Plantada (ha)
+
 -Produtividade (kg/ha)
+
 -Fonte
+
 
 ### 🧪 Processamento de Dados ###
 Foram realizadas as seguintes etapas de tratamento:
@@ -63,6 +71,7 @@ df_derived['Variação Produtividade (%)'] = df_derived['Produtividade Calculada
 *Densidade de produção (ton/ha)*
 
 df_derived['Densidade de Produção (ton/ha)'] = df_derived['Produção (ton)'] / df_derived['Área Plantada (ha)']
+
 
 
 ### 🤖 Modelo de Previsão ###
@@ -95,13 +104,9 @@ previsao_2025 = modelo.predict(dados_2025)[0]
 
 ### 🖼️ Gráfico da Previsão ###
 
+![Gráfico da Previsão](document/grafico_previsao_2025.png)
+![Produtividade Real vs Prevista](document/produtividade_real_vs_pvista.png)
 
-### Imagens ###
-
-![Dashboard](document/Dashboard1.png)
-![ ](document/Dashboard2.png)
-![ ](document/Dashboard3.png)
-![ ](document/ESP32.png)
 
 ### Vídeo Demonstrativo ###
 
