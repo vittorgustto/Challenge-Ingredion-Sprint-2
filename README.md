@@ -78,9 +78,13 @@ df_derived['Densidade de Produção (ton/ha)'] = df_derived['Produção (ton)'] 
 Utilizamos Regressão Linear com a biblioteca scikit-learn. As variáveis preditoras foram:
 
 -Ano
+
 -Área Plantada (ha)
+
 -Produtividade Calculada
+
 -Variação Produtividade (%)
+
 -Densidade de Produção (ton/ha)
 
 O modelo foi treinado com todos os dados históricos e utilizou a média das variáveis para realizar a previsão de 2025.
@@ -138,7 +142,7 @@ Você pode abrir o arquivo em Excel, LibreOffice, ou outro sistema para visualiz
 
 3. Execute o script para treinar o modelo e gerar o gráfico.
 
-4. O arquivo previsao_2025_final.csv será gerado automaticamente.
+4. O arquivo dados_com_previsao_2025.csv será gerado automaticamente.
 
 
 ### 📌 Observações ###
