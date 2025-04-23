@@ -108,6 +108,18 @@ previsao_2025 = modelo.predict(dados_2025)[0]
 ![Produtividade Real vs Prevista](document/produtividade_real_vs_pvista.png)
 
 
+### Códigos Google Collab ###
+
+Os códigos/scrpits utilizados no Google Collab se encontram em */Códigos Collab.ipynb* na pasta raíz.
+
+
+### 💾 Exportação Final ###
+
+O DataFrame com os dados reais e a linha da previsão de 2025 foi exportado para:
+
+previsao_2025_final.csv
+
+
 ### Vídeo Demonstrativo ###
 
 [Link do vídeo](https://youtu.be/F-sXUfZe3tw)
