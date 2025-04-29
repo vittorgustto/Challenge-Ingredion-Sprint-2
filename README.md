@@ -212,6 +212,9 @@ Você pode abrir o arquivo em Excel, LibreOffice, ou outro sistema para visualiz
 
 4. O arquivo dados_com_previsao_2025.csv será gerado automaticamente.
 
+### Link Vídeo Youtube ###
+
+https://www.youtube.com/watch?v=uNdEICYmiR0
 
 ### 📌 Observações ###
 
