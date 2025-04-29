@@ -111,6 +111,74 @@ previsao_2025 = modelo.predict(dados_2025)[0]
 ![Gráfico da Previsão](document/grafico_previsao_2025.png)
 ![Produtividade Real vs Prevista](document/produtividade_real_vs_pvista.png)
 
+### 🧹 Documentação do Processo de Preparação dos Dados ###
+
+O processo de preparação dos dados envolveu várias etapas para garantir a qualidade e a consistência das informações utilizadas no modelo. Inicialmente, os dados foram carregados a partir de um arquivo CSV, com atenção especial ao separador e à codificação para lidar com possíveis variações nos formatos dos dados.​
+
+Em seguida, foram realizadas limpezas nas colunas numéricas, substituindo vírgulas por pontos para padronizar os separadores decimais e removendo pontos utilizados como separadores de milhar. Essas colunas foram então convertidas para o tipo numérico adequado, e linhas com valores ausentes foram descartadas para evitar inconsistências no treinamento do modelo.​
+
+Além disso, foram criadas colunas derivadas para enriquecer o conjunto de dados:​
+
+* Produtividade Calculada (kg/ha): calculada dividindo a produção em toneladas pela área plantada em hectares e multiplicando por 1.000 para converter para kg/ha.​
+* Variação da Produtividade (%): calculada como a variação percentual da produtividade calculada em relação ao ano anterior.​
+* Densidade de Produção (ton/ha): obtida dividindo a produção em toneladas pela área plantada em hectares.​
+
+Essas transformações permitiram uma análise mais aprofundada e a extração de insights relevantes para a modelagem preditiva.
+
+### 📊 Justificativa da Escolha das Variáveis ###
+
+A seleção das variáveis independentes para o modelo de regressão linear foi baseada na relevância e na disponibilidade dos dados. As variáveis escolhidas foram:​
+
+* Ano: incluído para capturar tendências temporais e possíveis efeitos sazonais na produção agrícola.​
+* Área Plantada (ha): representa o tamanho da área cultivada, sendo um fator direto que influencia a quantidade total de produção.​
+* Produtividade Calculada (kg/ha): indicador da eficiência da produção por unidade de área, refletindo fatores como tecnologia, manejo agrícola e condições climáticas.​
+* Variação da Produtividade (%): permite capturar mudanças ano a ano na produtividade, indicando melhorias ou declínios na eficiência produtiva.​
+* Densidade de Produção (ton/ha): oferece uma medida adicional da produtividade, considerando a produção total em relação à área plantada.​
+
+Essas variáveis foram selecionadas por sua capacidade de representar fatores críticos que afetam a produção agrícola e por estarem disponíveis de forma consistente nos dados históricos.
+
+### 🧠 Justificativa do Modelo e Lógica Preditiva ###
+
+Optou-se pela utilização de um modelo de regressão linear devido à sua simplicidade, interpretabilidade e adequação ao conjunto de dados disponível. A regressão linear é eficaz para identificar relações lineares entre variáveis independentes e uma variável dependente, o que é apropriado para o objetivo de prever a produção agrícola com base em fatores como área plantada e produtividade.​
+
+A lógica preditiva do modelo consiste em ajustar uma equação linear que melhor se aproxima dos dados históricos, minimizando a soma dos erros quadráticos entre os valores previstos e os observados. Uma vez treinado, o modelo pode ser utilizado para prever a produção futura ao fornecer valores estimados para as variáveis independentes.
+
+### 📈 Justificativa Técnica com Métricas e Gráficos ###
+
+Para avaliar o desempenho do modelo de regressão linear, foram utilizadas as seguintes métricas:​
+
+* Erro Absoluto Médio (MAE): mede a média dos erros absolutos entre as previsões e os valores reais, fornecendo uma indicação clara da magnitude média dos erros.​
+* Coeficiente de Determinação (R²): indica a proporção da variabilidade na variável dependente que é explicada pelas variáveis independentes no modelo. Um valor de R² próximo de 1 sugere um bom ajuste do modelo aos dados.​
+
+Além das métricas quantitativas, foram gerados gráficos para visualizar o desempenho do modelo, incluindo:​
+
+* Gráfico de Produção Real vs. Produção Prevista: compara os valores observados com as previsões do modelo, permitindo identificar padrões e discrepâncias.​
+* Gráfico de Resíduos: exibe os erros de previsão em relação aos valores previstos, ajudando a detectar heterocedasticidade ou padrões não capturados pelo modelo.​
+
+Essas análises visuais complementam as métricas numéricas, proporcionando uma compreensão mais abrangente do desempenho do modelo.​
+
+### 🧾 Explicação do Funcionamento do Código ###
+
+O código do projeto segue uma estrutura sequencial que abrange todas as etapas do processo de modelagem preditiva:​
+
+1. Importação de Bibliotecas: carrega as bibliotecas necessárias para manipulação de dados, modelagem e visualização.​
+Gist
+
+2. Carregamento e Limpeza dos Dados: lê o arquivo CSV contendo os dados brutos, realiza a limpeza e conversão de tipos para garantir a consistência dos dados.​
+
+3. Criação de Variáveis Derivadas: calcula colunas adicionais que enriquecem o conjunto de dados e fornecem insights adicionais para o modelo.​
+
+4. Divisão dos Dados: separa os dados em conjuntos de treino e teste para avaliar o desempenho do modelo de forma imparcial.​
+
+5. Treinamento do Modelo: ajusta o modelo de regressão linear aos dados de treino, aprendendo os coeficientes que melhor representam as relações entre as variáveis.​
+
+6. Avaliação do Modelo: utiliza o conjunto de teste para calcular métricas de desempenho e gerar gráficos que ilustram a eficácia do modelo.​
+
+7. Previsão para 2025: utiliza o modelo treinado para prever a produção agrícola para o ano de 2025, com base em valores estimados das variáveis independentes.​
+
+8. Exportação dos Resultados: salva as previsões em um arquivo CSV para posterior análise e apresentação.​
+
+Essa estrutura modular facilita a compreensão e a manutenção do código, além de permitir futuras extensões ou ajustes no modelo.
 
 ### Códigos Google Collab ###
 
